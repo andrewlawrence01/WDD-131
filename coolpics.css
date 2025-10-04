@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+  --primary-color: #52489c;
+  --secondary-color: #59c3c3;
+  --accent-color: #f45b69;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: "Mooli", sans-serif;
+}
+
+/* Global Styles */
+body {
+  font-family: var(--primary-font);
+  font-size: 1.2em;
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+header, footer {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1em;
+}
+
+h1, h2 {
+  font-family: var(--secondary-font);
+  margin: 0.5em 0;
+}
+
+a:link,
+a:visited {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation */
+#menuButton {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+nav a {
+  display: block;
+  padding: 0.5em;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 1em;
+}
+
+.gallery img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer p {
+  margin: 0;
+}
+
+/* === MEDIA QUERIES === */
+
+/* Medium Screens (≥700px) */
+@media (min-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Large Screens (≥1000px) */
+@media (min-width: 1000px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+  }
+
+  #menuButton {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

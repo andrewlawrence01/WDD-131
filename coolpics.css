@@ -10,24 +10,24 @@
   --secondary-font: "Mooli", sans-serif;
 }
 
-/* Global Styles */
 body {
   font-family: var(--primary-font);
   font-size: 1.2em;
   color: var(--text-dark);
   margin: 0;
-  padding: 0;
   background-color: #fff;
 }
 
-header, footer {
+header,
+footer {
   background-color: var(--primary-color);
   color: var(--text-light);
   text-align: center;
   padding: 1em;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: var(--secondary-font);
   margin: 0.5em 0;
 }
@@ -42,28 +42,24 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Navigation */
-#menuButton {
+.menu-button {
   background: none;
   border: none;
   color: var(--text-light);
   font-size: 1.2em;
   cursor: pointer;
-  margin-top: 0.5em;
 }
 
-nav {
-  display: none;
+.menu {
+  display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
 
-nav a {
-  display: block;
-  padding: 0.5em;
+.hide {
+  display: none;
 }
 
-/* Gallery */
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
@@ -77,23 +73,53 @@ nav a {
   object-fit: cover;
   max-width: 100%;
   border-radius: 8px;
+  cursor: pointer;
 }
 
-/* Footer */
 footer p {
   margin: 0;
 }
 
-/* === MEDIA QUERIES === */
+dialog {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  padding: 0;
+  z-index: 10;
+}
 
-/* Medium Screens (≥700px) */
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+dialog img {
+  display: block;
+  width: 90%;
+  max-height: 100%;
+  margin: 20vh auto;
+  border-radius: 8px;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 20vh;
+  right: 5vw;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 @media (min-width: 700px) {
   .gallery {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-/* Large Screens (≥1000px) */
 @media (min-width: 1000px) {
   header {
     display: flex;
@@ -102,11 +128,11 @@ footer p {
     padding: 1em 2em;
   }
 
-  #menuButton {
+  .menu-button {
     display: none;
   }
 
-  nav {
+  .menu {
     display: flex;
     flex-direction: row;
     gap: 1.5em;

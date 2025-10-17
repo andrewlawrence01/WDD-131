@@ -1,0 +1,199 @@
+/* ---------- GLOBAL STYLES ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* ---------- HEADER & NAV ---------- */
+header {
+  background-color: #2b4b7c;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  text-decoration: underline;
+  color: #ffeb3b;
+}
+
+/* ---------- MAIN LAYOUT ---------- */
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
+  background: #e3ecf7;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  color: #2b4b7c;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 1rem auto 0;
+}
+
+/* ---------- FEATURED SECTION ---------- */
+.featured {
+  margin-top: 2rem;
+}
+
+.featured article {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.featured img {
+  width: 120px;
+  border-radius: 8px;
+}
+
+/* ---------- FILTER BAR ---------- */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  width: 240px;
+}
+
+.filter-bar input:focus,
+.filter-bar select:focus {
+  outline: 2px solid #2b4b7c;
+}
+
+/* ---------- REVIEW GRID ---------- */
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.review-card {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-card img {
+  width: 150px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* ---------- ABOUT PAGE ---------- */
+.about {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.about h2,
+.about h3 {
+  color: #2b4b7c;
+}
+
+.about ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about li {
+  padding: 0.3rem 0;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #2b4b7c;
+  color: white;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  nav a {
+    margin: 0 0.5rem;
+    display: inline-block;
+  }
+
+  .featured article {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .filter-bar input,
+  .filter-bar select {
+    width: 100%;
+  }
+}

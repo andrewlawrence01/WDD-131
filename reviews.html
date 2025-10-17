@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bright Reads - Reviews</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Bright Reads</h1>
+    <nav>
+      <a href="bookreviewssite.html">Home</a>
+      <a href="reviews.html" class="active">Reviews</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Latest Book Reviews</h2>
+      <p>Search or filter by genre to find your next favorite story.</p>
+
+      <!-- Search and Filter Controls -->
+      <div class="filter-bar">
+        <input type="text" id="searchInput" placeholder="Search by book title..." />
+        <select id="genreFilter">
+          <option value="all">All Genres</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Mystery">Mystery</option>
+          <option value="Adventure">Adventure</option>
+        </select>
+      </div>
+
+      <!-- Review Cards -->
+      <div class="review-grid" id="reviewGrid">
+        <article class="review-card" data-genre="Fantasy">
+          <img src="dragonspromise.jpg" alt="Cover of The Dragon's Promise">
+          <div>
+            <h3>The Dragon's Promise</h3>
+            <p><strong>Genre:</strong> Fantasy | <strong>Ages:</strong> 11+ | ⭐⭐⭐⭐⭐</p>
+            <p>A beautifully written adventure about courage and destiny. Parents love the life lessons; kids love the dragons!</p>
+          </div>
+        </article>
+
+        <article class="review-card" data-genre="Mystery">
+          <img src="midnightlibrary.jpg" alt="Cover of The Midnight Library">
+          <div>
+            <h3>The Midnight Library</h3>
+            <p><strong>Genre:</strong> Mystery | <strong>Ages:</strong> 12+ | ⭐⭐⭐⭐☆</p>
+            <p>A thought-provoking mystery that balances imagination with emotional depth. Recommended for mature young readers.</p>
+          </div>
+        </article>
+
+        <article class="review-card" data-genre="Adventure">
+          <img src="hiddenisland.jpg" alt="Cover of The Hidden Island">
+          <div>
+            <h3>The Hidden Island</h3>
+            <p><strong>Genre:</strong> Adventure | <strong>Ages:</strong> 10+ | ⭐⭐⭐⭐☆</p>
+            <p>Fun, fast-paced, and filled with clever twists. A perfect summer read for kids who love discovery stories.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bright Reads | Family Book Reviews</p>
+  </footer>
+
+  <script>
+    // Simple search and filter functionality
+    const searchInput = document.getElementById('searchInput');
+    const genreFilter = document.getElementById('genreFilter');
+    const reviewCards = document.querySelectorAll('.review-card');
+
+    function filterReviews() {
+      const searchValue = searchInput.value.toLowerCase();
+      const genreValue = genreFilter.value;
+
+      reviewCards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const genre = card.getAttribute('data-genre');
+
+        const matchesSearch = title.includes(searchValue);
+        const matchesGenre = genreValue === 'all' || genre === genreValue;
+
+        if (matchesSearch && matchesGenre) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', filterReviews);
+    genreFilter.addEventListener('change', filterReviews);
+  </script>
+</body>
+</html>

@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <!-- Accessibility Skip Link -->
+
   <div class="skiptocontent">
     <a href="#maincontent">Skip to main content</a>
   </div>
@@ -20,41 +20,34 @@
     <h1>Redwing Reads</h1>
     <nav>
       <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Archive</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="about1.html">About</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="maincontent">
     <div class="content-grid">
-      <!-- Blog Articles -->
-      <section class="articles">
-        <article>
-          <img src="fulllogoYT-removebg-preview.png" alt="Book cover example">
-          <div class="article-content">
-            <h2>The Timeless Tale of Adventure</h2>
-            <p class="meta">by Andrew Lawrence | October 10, 2025</p>
-            <p>In this thrilling fantasy novel, the author takes us on a journey through mystical lands where courage and friendship shape destiny...</p>
-          </div>
-        </article>
-
-        <article>
-          <img src="fulllogoYT-removebg-preview.png" alt="Book cover example">
-          <div class="article-content">
-            <h2>Exploring the Human Condition</h2>
-            <p class="meta">by Andrew Lawrence | September 22, 2025</p>
-            <p>A moving story about identity and resilience, this book sheds light on what it means to face adversity and find one’s true self.</p>
-          </div>
-        </article>
+      
+      <section class="articles" id="articleList">
       </section>
 
-      <!-- Sidebar Filter -->
+
       <aside class="filters">
         <h3>Search & Filter</h3>
-        <p>(Filter form will go here in Part 2)</p>
+        <form id="filterForm">
+          <input type="text" id="searchBar" placeholder="Search by title..." aria-label="Search by title">
+          <label for="genreFilter">Filter by Genre:</label>
+          <select id="genreFilter">
+            <option value="all">All Genres</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+          </select>
+        </form>
       </aside>
+
     </div>
   </main>
 
@@ -62,6 +55,7 @@
     <p>&copy; 2025 Redwing Reads. All rights reserved.</p>
   </footer>
 
-  <script src="blog.js"></script>
+  <script src="blog.js" defer></script>
+  <script src="main.js" defer></script>
 </body>
 </html>

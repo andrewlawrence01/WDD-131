@@ -91,29 +91,54 @@ nav a:hover {
 }
 
 /* Articles Section */
-article {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid var(--accent-color);
-  padding-bottom: 1rem;
+.articles {
+  max-width: 600px; /* Align with navbar width for consistency */
+  margin: 0 auto;
 }
 
+article {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem; /* More space between articles */
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 1.5rem;
+}
+
+/* Left column (image and details) */
 article img {
   width: 100%;
   border-radius: 10px;
+  display: block;
+  margin: 0 auto; /* Center image horizontally */
+}
+
+/* Article content */
+.article-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .article-content h2 {
   font-family: var(--font-heading);
   color: var(--primary-color);
+  margin-top: -0.2rem; /* Line up with date */
 }
 
 .article-content .meta {
-  font-size: 0.9rem;
-  color: #666;
-  margin: 0.5rem 0;
+  font-size: 1rem; /* Increased font size for date */
+  color: #555;
+  margin: 0.4rem 0;
+  text-align: right; /* Right align details */
+  line-height: 1.3; /* Slightly reduced spacing */
+  border-right: 2px solid var(--accent-color); /* Right border on detail section */
+  padding-right: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.article-content p {
+  margin-top: 0.5rem;
 }
 
 /* Sidebar */
@@ -128,6 +153,16 @@ article img {
   color: var(--primary-color);
   font-family: var(--font-heading);
   margin-bottom: 1rem;
+}
+
+.filters input,
+.filters select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  font-family: var(--font-body);
 }
 
 /* Footer */
@@ -152,5 +187,12 @@ footer {
   nav ul {
     grid-template-columns: 1fr;
     row-gap: 0.5rem;
+  }
+
+  .article-content .meta {
+    text-align: left;
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
   }
 }

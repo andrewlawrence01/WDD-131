@@ -1,0 +1,80 @@
+/* General Layout */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form-container {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+/* Form Grid */
+form {
+  display: grid;
+  grid-template-areas:
+    "front"
+    "back"
+    "button";
+  gap: 1rem;
+  width: 320px;
+}
+
+/* Card Styling */
+.card {
+  border-radius: 15px;
+  padding: 1.5rem;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: grid;
+  gap: 0.5rem;
+}
+
+.card-front {
+  grid-area: front;
+  background: linear-gradient(135deg, #4b79a1, #283e51);
+  z-index: 2;
+}
+
+.card-back {
+  grid-area: back;
+  background: linear-gradient(135deg, #222, #444);
+  margin-top: -100px;
+  z-index: 1;
+}
+
+.card-image {
+  justify-self: end;
+}
+
+label {
+  font-size: 0.9rem;
+}
+
+input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Button */
+button {
+  grid-area: button;
+  padding: 0.8rem;
+  background-color: #4b79a1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #35546d;
+}

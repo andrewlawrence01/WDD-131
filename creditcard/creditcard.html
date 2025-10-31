@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Secure credit card submission form" />
+    <meta name="author" content="Andrew Lawrence" />
+    <title>Credit Card Submission Form</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="creditcard.css" />
+  </head>
+
+  <body>
+    <main class="form-container">
+      <form>
+        <!-- Card Front -->
+        <section class="card card-front">
+          <img
+            class="card-image"
+            src="VISA-symbol.jpg"
+            alt="Card Logo"
+            height="55px"
+          />
+
+          <label for="card-name">Cardholder Name</label>
+          <input
+            type="text"
+            id="card-name"
+            name="card-name"
+            placeholder="Jane Doe"
+            required
+          />
+
+          <label for="card-number">Card Number</label>
+          <input
+            type="text"
+            id="card-number"
+            name="card-number"
+            placeholder="1234 5678 9012 3456"
+            minlength="16"
+            maxlength="19"
+            required
+          />
+
+          <label for="exp-date">Expiration Date</label>
+          <input
+            type="text"
+            id="exp-date"
+            name="exp-date"
+            placeholder="MM/YY"
+            required
+          />
+        </section>
+
+        <!-- Card Back -->
+        <section class="card card-back">
+          <label for="cvc">CVC</label>
+          <input
+            type="text"
+            id="cvc"
+            name="cvc"
+            placeholder="123"
+            minlength="3"
+            maxlength="4"
+            required
+          />
+        </section>
+
+        <!-- Submit -->
+        <button type="submit">Submit Payment</button>
+      </form>
+    </main>
+  </body>
+</html>

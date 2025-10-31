@@ -1,0 +1,75 @@
+/* Basic Page Styling */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main container */
+main {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem 3rem;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Headings */
+h1 {
+  color: #0074d9;
+  margin-bottom: 1rem;
+}
+
+/* Input label and field */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: #0074d9;
+  outline: none;
+}
+
+/* Button styling */
+button {
+  margin-top: 1rem;
+  background-color: #0074d9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* Output text */
+#output {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2e8b57;
+}

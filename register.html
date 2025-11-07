@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Youth Camp Registration</title>
+  <meta name="description" content="Youth camp registration page">
+  <meta name="author" content="Your Name">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+  <header>
+    <h1>Youth Camp Registration</h1>
+  </header>
+
+  <main>
+    <form>
+
+      <!-- PARTICIPANTS FIELDSET -->
+      <fieldset id="participants">
+        <legend>Participants</legend>
+
+        <!-- Participant 1 default section -->
+        <section class="participant1">
+          <h3>Participant 1</h3>
+
+          <label for="fname1">First Name</label>
+          <input type="text" id="fname1" name="fname1" required>
+
+          <label for="age1">Age</label>
+          <input type="number" id="age1" name="age1" required>
+
+          <label for="fee1">Camp Fee ($)</label>
+          <input type="number" id="fee1" name="fee1" required>
+        </section>
+
+        <button type="button" id="addParticipant">+ Add Participant</button>
+      </fieldset>
+
+      <!-- Adult Section -->
+      <fieldset>
+        <legend>Adult Contact</legend>
+
+        <label for="adult_name">Adult Name</label>
+        <input type="text" id="adult_name" required>
+      </fieldset>
+
+      <button type="submit" id="submitBtn">Submit</button>
+    </form>
+
+    <section id="summary" class="hide"></section>
+  </main>
+
+  <script src="register.js"></script>
+</body>
+</html>

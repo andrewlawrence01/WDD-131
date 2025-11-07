@@ -1,0 +1,52 @@
+/* Basic styling */
+body {
+  font-family: sans-serif;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+fieldset {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+input {
+  width: 100%;
+  padding: .4rem;
+  margin-top: .25rem;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 1rem;
+  padding: .7rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+/* Participants arranged in two-column grid */
+#participants {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Force Add button on bottom row */
+#addParticipant {
+  grid-column: 1 / -1;
+}

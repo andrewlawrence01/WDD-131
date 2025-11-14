@@ -1,0 +1,95 @@
+<!-- flexbox.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Exercise</title>
+    <link rel="stylesheet" href="flexbox.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Flexbox Exercise</h1>
+      <nav>
+        <ul class="main-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">One</a></li>
+          <li><a href="#">Two</a></li>
+          <li><a href="#">Three</a></li>
+          <li><a href="#">Four</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="media-card-container">
+        <h2>A Media Card Example</h2>
+
+        <!-- Activity 2 Media Card -->
+        <section class="media-card">
+          <div class="media-card__image">
+            <img src="https://byui-cit.github.io/learning-modules/img/bechler-topo.png" alt="Topo Map">
+          </div>
+          <div class="media-card__content">
+            <h3>Example Card</h3>
+            <p>
+              This is an example media card demonstrating how flexbox shifts from
+              a vertical layout on small screens to a horizontal layout on larger screens.
+            </p>
+          </div>
+        </section>
+      </section>
+
+      <section class="gallery-container">
+        <h2>A Gallery Example</h2>
+
+        <div class="gallery">
+
+          <!-- Activity 3: Copy media card 4 times -->
+
+          <section class="media-card">
+            <div class="media-card__image">
+              <img src="https://byui-cit.github.io/learning-modules/img/bechler-topo.png" alt="Topo Map">
+            </div>
+            <div class="media-card__content">
+              <h3>Gallery Card 1</h3>
+              <p>Each card in this gallery uses flexbox and wraps based on screen size.</p>
+            </div>
+          </section>
+
+          <section class="media-card">
+            <div class="media-card__image">
+              <img src="https://byui-cit.github.io/learning-modules/img/bechler-topo.png" alt="Topo Map">
+            </div>
+            <div class="media-card__content">
+              <h3>Gallery Card 2</h3>
+              <p>Resize your browser to watch the layout shift dynamically.</p>
+            </div>
+          </section>
+
+          <section class="media-card">
+            <div class="media-card__image">
+              <img src="https://byui-cit.github.io/learning-modules/img/bechler-topo.png" alt="Topo Map">
+            </div>
+            <div class="media-card__content">
+              <h3>Gallery Card 3</h3>
+              <p>Flexbox makes responsive layouts efficient and easy to maintain.</p>
+            </div>
+          </section>
+
+          <section class="media-card">
+            <div class="media-card__image">
+              <img src="https://byui-cit.github.io/learning-modules/img/bechler-topo.png" alt="Topo Map">
+            </div>
+            <div class="media-card__content">
+              <h3>Gallery Card 4</h3>
+              <p>Using flex: 1 1 460px allows these cards to form two columns on large screens.</p>
+            </div>
+          </section>
+
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>

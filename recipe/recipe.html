@@ -1,59 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Book</title>
 
-  <!-- SEO -->
-  <title>Fresh & Simple Recipes</title>
-  <meta name="description" content="A simple, responsive recipe catalog featuring fresh meals, easy instructions, and helpful ratings." />
+  <!-- SEO Meta tags -->
+  <meta name="description" content="A responsive, accessible recipe book with randomized recipes and search filtering.">
 
-  <!-- Social Media Meta (Open Graph) -->
-  <meta property="og:title" content="Fresh & Simple Recipes">
-  <meta property="og:type" content="website" />
-  <meta property="og:description" content="A simple, responsive recipe catalog featuring fresh meals, easy instructions, and helpful ratings.">
-  <meta property="og:image" content="images/recipe-book.png">
-  <meta property="og:url" content="https://your-domain.com/recipes/index.html">
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Recipe Book">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Discover a random recipe or search through tasty dishes.">
+  <meta property="og:image" content="images/og-food.jpg">
+  <meta property="og:url" content="https://yourdomain.com/recipes/index.html">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="recipes.css" />
-
-  <!-- Google Fonts (for alternative accessible headline font) -->
-  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="recipes.css">
 
 </head>
 <body>
-
   <header>
-    <div class="logo-title">
-      <img src="images/recipe-book.png" alt="Recipe Book Logo" class="logo">
-      <h1>Fresh & Simple Recipes</h1>
+    <div class="logo">
+      <img src="images/recipe-book.png" alt="recipe book logo">
+      <h1>Recipe Book</h1>
     </div>
-
-    <!-- Search Bar -->
-    <form id="searchForm" class="search">
-      <label for="search" class="visually-hidden">Search recipes</label>
-      <input type="search" id="search" placeholder="Search recipes...">
-      <button type="submit">Search</button>
-    </form>
   </header>
 
   <main>
-    <section id="recipes"></section>
+
+    <!-- Search Form -->
+    <form id="searchForm" class="search">
+      <input type="text" id="searchInput" placeholder="Search recipes…">
+      <button id="searchBtn">Search</button>
+    </form>
+
+    <!-- Recipe Output -->
+    <section id="recipeOutput"></section>
+
   </main>
 
   <footer>
-    <p class="attribution">
-      <a href="https://www.flaticon.com/free-icons/recipe"
-         title="recipe icons" target="_blank">
+    <p style="font-size:0.6em;">
+      <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">
         Recipe icons created by Freepik - Flaticon
       </a>
     </p>
 
-    <!-- Social section with attribution comment -->
     <div class="social">
       <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates -->
       <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
@@ -62,7 +57,7 @@
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script type="module" src="main.js"></script>
+  <!-- JS -->
+  <script src="main.js" type="module"></script>
 </body>
 </html>

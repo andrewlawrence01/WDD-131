@@ -1,23 +1,28 @@
-export const recipes = [
+const recipes = [
   {
-    id: 1,
-    name: "Spaghetti Bolognese",
-    image: "images/spaghetti.jpg",
+    name: "Apple Crisp",
+    image: "images/apple-crisp.jpg",
+    description: "A warm fall dessert made with apples, cinnamon, and a crispy oat topping.",
     rating: 4,
-    description: "A classic Italian pasta dish made with rich tomato sauce, ground beef, and fresh herbs."
+    tags: ["Dessert", "Fruit"],
+    ingredients: ["Apples", "Oats", "Sugar", "Butter", "Cinnamon"]
   },
   {
-    id: 2,
-    name: "Chicken Stir Fry",
-    image: "images/stirfry.jpg",
+    name: "Spaghetti Carbonara",
+    image: "images/carbonara.jpg",
+    description: "A classic Italian pasta dish with eggs, cheese, pancetta, and pepper.",
     rating: 5,
-    description: "Crispy chicken and colorful veggies tossed in a savory homemade stir-fry sauce."
+    tags: ["Dinner", "Pasta", "Italian"],
+    ingredients: ["Spaghetti", "Pancetta", "Eggs", "Parmesan"]
   },
   {
-    id: 3,
-    name: "Avocado Toast",
-    image: "images/avocado_toast.jpg",
+    name: "Chicken Tacos",
+    image: "images/chicken-tacos.jpg",
+    description: "Simple and delicious tacos with shredded chicken and fresh toppings.",
     rating: 3,
-    description: "Simple, fresh avocado served on warm toasted whole grain bread."
+    tags: ["Dinner", "Mexican"],
+    ingredients: ["Chicken", "Tortillas", "Tomatoes", "Lettuce", "Cheese"]
   }
 ];
+
+export default recipes;

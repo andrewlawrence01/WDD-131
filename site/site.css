@@ -1,0 +1,197 @@
+/* =============================
+   Redwing Enterprises Stylesheet
+   ============================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+:root {
+  --primary: #e63946;
+  --secondary: #1d3557;
+  --background: #f1faee;
+  --text: #1a1a1a;
+  --white: #ffffff;
+  --max-width: 1100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.site-header {
+  width: 100%;
+  background: var(--white);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+.main-nav a.active,
+.main-nav a:hover {
+  color: var(--primary);
+}
+
+/* MAIN LAYOUT */
+main {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* HERO SECTION */
+.hero {
+  background: var(--secondary);
+  color: var(--white);
+  padding: 3rem 2rem;
+  border-radius: 14px;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0.7rem auto 0;
+}
+
+/* FEATURED VIDEO */
+.featured {
+  margin-bottom: 3rem;
+}
+
+.featured h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+#featured-video-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.video-buttons button {
+  padding: 0.6rem 1rem;
+  background: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.video-buttons button:hover {
+  background: var(--primary);
+}
+
+/* MERCH PREVIEW */
+.merch-preview h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+#merch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.merch-item {
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.merch-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.7rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.7rem 1.3rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: #c62834;
+}
+
+/* FOOTER */
+footer {
+  margin-top: auto;
+  padding: 1.5rem;
+  background: var(--secondary);
+  color: var(--white);
+  text-align: center;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+  .main-nav ul {
+    gap: 1rem;
+  }
+
+  .video-buttons {
+    flex-direction: column;
+  }
+}

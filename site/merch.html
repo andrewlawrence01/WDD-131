@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redwing Merch Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Redwing Enterprises</div>
+    <nav class="nav">
+      <a href="site.html">Home</a>
+      <a href="merch.html" class="active">Merch</a>
+      <a href="https://www.youtube.com/@redwing01" target="_blank">YouTube</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Merch Store</h1>
+    <p class="page-desc">Browse official Redwing merchandise. Filter, explore, and find what fits your style.</p>
+
+    <section class="merch-filters">
+      <label for="categoryFilter">Filter by Category:</label>
+      <select id="categoryFilter">
+        <option value="all">All</option>
+        <option value="shirts">Shirts</option>
+        <option value="hats">Hats</option>
+        <option value="stickers">Stickers</option>
+      </select>
+    </section>
+
+    <section id="merchGrid" class="merch-grid">
+      <!-- Products dynamically inserted by main.js -->
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Redwing Enterprises. All rights reserved.</p>
+  </footer>
+</body>
+</html>
